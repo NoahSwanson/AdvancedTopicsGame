@@ -13,8 +13,7 @@ document.addEventListener('mousedown', e => {
 //purpose: deals with the moving mouse
 //keeps mouseX and mouseY as the coordinates of the cursor
 function mouseMoveHandler(e) {
-  var relativeX = e.clientX;
-  // var relativeX = e.clientX - canvas.offsetLeft;
+  var relativeX = e.clientX - canvas.offsetLeft;
 
   var relativeY = e.clientY - canvas.offsetTop;
   if(relativeX > 0 && relativeX < canvas.width) {
