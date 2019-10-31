@@ -8,6 +8,8 @@ function draw() {
     drawBricks();
     drawStamp();
     drawStage();
+
+    drawBall();
 }
 
 function drawStage() {
