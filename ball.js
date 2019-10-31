@@ -23,13 +23,18 @@ var vy=velocity*Math.sin(angle);
 
 function drawBall(){
     ctx.beginPath();
+    if (ballStart) {
+        shoot();
+    }
     ctx.arc(canvas.width/2, canvas.height-ballRadius, ballRadius, 0, Math.PI*2, false);
     ctx.fill();
     ctx.closePath();
+    
 }
 
 function shoot() {
-
+    ballX+=vx;
+    ballY+=vy;
 }
 
 function drawArrow() {
