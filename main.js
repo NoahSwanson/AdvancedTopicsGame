@@ -1,14 +1,16 @@
+
 var score = 0;
 var level = 1;
-var bricksLeft = 2;
+var bricksLeft = 3;
 var bricks = [];
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    drawArrow();
     drawBricks();
     drawStamp();
     drawStage();
-
     drawBall();
 }
 

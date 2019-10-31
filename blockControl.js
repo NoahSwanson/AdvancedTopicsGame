@@ -1,7 +1,7 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var brickHeight = 10;
-var brickWidth = 75;
+var brickWidth = 50;
 var mouseX = 0;
 var mouseY = 0;
 
@@ -13,7 +13,9 @@ document.addEventListener('mousedown', e => {
 //purpose: deals with the moving mouse
 //keeps mouseX and mouseY as the coordinates of the cursor
 function mouseMoveHandler(e) {
-  var relativeX = e.clientX - canvas.offsetLeft;
+  var relativeX = e.clientX;
+  // var relativeX = e.clientX - canvas.offsetLeft;
+
   var relativeY = e.clientY - canvas.offsetTop;
   if(relativeX > 0 && relativeX < canvas.width) {
     mouseX = relativeX;
