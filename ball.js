@@ -1,4 +1,5 @@
 var canvas = document.getElementById("myCanvas");
+canvas.style.cursor = "none";
 var ctx = canvas.getContext("2d");
 document.addEventListener("keydown", keyDownHandler, false);
 

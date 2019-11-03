@@ -1,3 +1,5 @@
+
+
 var score = 0;
 var level = 1;
 var bricksLeft = 1;
@@ -46,6 +48,7 @@ function nextLevel(){
     startY=ballY-ballRadius*3/2;
     endX=-arrowLength*Math.cos(angle)+startX;
     endY=-arrowLength*Math.sin(angle)+startY;
+    arrowLength=arrowLength*5/6;
 
     //speed variables reset
     vx=velocity*Math.cos(angle);
