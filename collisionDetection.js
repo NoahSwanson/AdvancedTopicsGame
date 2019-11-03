@@ -20,7 +20,13 @@ function brickDetection() {
         bottomY=bricks[i].y+brickHeight;
 
         if ((ballX+ballRadius>leftX&&ballX<rightX+ballRadius)&&(ballY<bottomY+ballRadius&&ballY>topY)) {
-            vy=-vy;
+            brickHit(i);
         }
     }
+}
+
+function brickHit(brickNum) {
+    bricks.splice(brickNum,1);
+    vy=-vy;
+    score++;
 }

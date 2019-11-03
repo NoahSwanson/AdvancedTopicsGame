@@ -1,8 +1,12 @@
-
 var score = 0;
 var level = 1;
 var bricksLeft = 3;
 var bricks = [];
+var interval;
+
+function start() {
+    interval = setInterval(draw, 10);
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -25,5 +29,3 @@ function drawStage() {
         ctx.fillText("Click spacebar to start.", 8,40);
     }
 }
-
-var interval = setInterval(draw, 10);
