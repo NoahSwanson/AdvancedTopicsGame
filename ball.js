@@ -6,7 +6,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 var ballX=20+(Math.random()*(canvas.width-40));
 // var ballX=canvas.width/2;
 var ballRadius=10;
-var ballY=canvas.height+10;
+var ballY=canvas.height;
 var ballStart=false;
 
 //arrow variables

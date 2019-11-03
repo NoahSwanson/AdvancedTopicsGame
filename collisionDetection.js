@@ -3,8 +3,14 @@ function wallDetection(){
     if (ballX<ballRadius || ballX>canvas.width-ballRadius) {
         vx=-vx;
     }
-    if (ballY<2*ballRadius||ballY>canvas.height+ballRadius) {
+    if (ballY<2*ballRadius) {
         vy=-vy;
+    }
+    if (ballY>canvas.height+ballRadius) {
+        window.alert("HAHAHA YOU LOSE");
+        window.alert("Jk that sucks i'm sorry please play again");
+        ballY=0;
+        location.reload();
     }
 }
 
