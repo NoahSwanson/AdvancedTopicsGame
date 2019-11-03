@@ -10,7 +10,7 @@ var ballY=canvas.height;
 var ballStart=false;
 
 //arrow variables
-var angle = Math.random()*Math.PI;
+var angle = Math.random()*Math.PI/2+Math.PI/4;
 var startX=ballX+ballRadius/4;
 var startY=ballY-ballRadius*3/2;
 var arrowLength=120;

@@ -1,3 +1,4 @@
+var tempScore=0;
 //checks to see if ball is hitting wall. if so, direction switches
 function wallDetection(){
     if (ballX<ballRadius || ballX>canvas.width-ballRadius) {
@@ -17,7 +18,6 @@ function wallDetection(){
 //checks to see if ball is hitting any of the blocks. if so, y direction flips
 function brickDetection() {
     var leftX,rightX,topY,bottomY;
-
     
     for (i=0;i<bricks.length;i++) {
         leftX=bricks[i].x;
@@ -33,6 +33,15 @@ function brickDetection() {
 
 function brickHit(brickNum) {
     bricks.splice(brickNum,1);
-    vy=-vy;
     score++;
+
+    if (tempScore!=level-1) {
+        vy=-vy;
+        tempScore++;
+    }
+    else {
+        vy=0;
+        vx=0;
+        nextLevel();
+    }
 }
