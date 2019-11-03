@@ -5,6 +5,7 @@ var brickWidth = 50;
 var mouseX = 0;
 var mouseY = 0;
 
+//add event listeners, makes document watch mouse actions
 document.addEventListener("mousemove", mouseMoveHandler, false);
 document.addEventListener('mousedown', e => {
   placeBrick();

@@ -22,6 +22,7 @@ var velocity=5;
 var vx=velocity*Math.cos(angle);
 var vy=velocity*Math.sin(angle);
 
+//draws ball, and checks detections
 function drawBall(){
     ctx.beginPath();
     if (ballStart) {
@@ -29,6 +30,7 @@ function drawBall(){
     }
     ctx.arc(ballX, ballY-ballRadius, ballRadius, 0, Math.PI*2, false);
     wallDetection();
+    brickDetection();
     ctx.fill();
     ctx.closePath(); 
 }
@@ -54,14 +56,5 @@ function drawArrow() {
 function keyDownHandler(e) {
     if (e.key==" " || e.key=="Spacebar") {
         ballStart=true;
-    }
-}
-
-function wallDetection(){
-    if (ballX<ballRadius || ballX>canvas.width-ballRadius) {
-        vx=-vx;
-    }
-    if (ballY<2*ballRadius||ballY>canvas.height+ballRadius) {
-        vy=-vy;
     }
 }
