@@ -14,7 +14,7 @@ var ballStart=false;
 var angle = Math.random()*Math.PI/2+Math.PI/4;
 var startX=ballX+ballRadius/4;
 var startY=ballY-ballRadius*3/2;
-var arrowLength=120;
+var arrowLength=200;
 var endX=-arrowLength*Math.cos(angle)+startX;
 var endY=-arrowLength*Math.sin(angle)+startY;
 
