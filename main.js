@@ -12,7 +12,7 @@ function start() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     drawArrow();
     drawBricks();
     drawStamp();
