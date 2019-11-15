@@ -4,6 +4,7 @@ var brickHeight = 10;
 var brickWidth = 50;
 var mouseX = 0;
 var mouseY = 0;
+var brickColor = "";
 
 //add event listeners, makes document watch mouse actions
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -26,11 +27,32 @@ function mouseMoveHandler(e) {
 }
 
 //purpose: draws the floating brick around the cursor
+/*var setColor = "0095DD";
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    setColor = color;
+    return setColor;
+}
+
+function setColor(){
+  if(bricksLeft%5 == 0){
+    brickColor = getRandomColor();
+  }
+  else{
+    brickColor = brickColor;
+  }
+*/}
+
 function drawStamp() {
   if (bricksLeft>0) {
     ctx.beginPath();
     ctx.rect(mouseX, mouseY, brickWidth, brickHeight);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "0095DD" ;
     ctx.fill();
     ctx.closePath();
   }
@@ -41,7 +63,7 @@ function drawBricks() {
   ctx.beginPath();
   for (i=0; i<bricks.length; i++) {
     ctx.rect(bricks[i].x, bricks[i].y, brickWidth, brickHeight);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "0095DD";
     ctx.fill();
   }
   ctx.closePath();
